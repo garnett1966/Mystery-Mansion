@@ -1,0 +1,98 @@
+
+Mystery Mansion
+---------------
+
+Version 19.4 
+xxx, 2000
+
+This C/Unix port of Mystery Mansion and accompanying files are 
+copyright (C) 1999,2000 James Garnett.  All files are covered by a 
+copyright; see the file COPYRIGHT that came with this README for
+more information.
+
+Email: garnett@catbelly.com
+  WWW: http://www.catbelly.com/src/mm/mystery.html
+
+Mystery Mansion was originally conceived of, designed, and written by 
+Bill Wolpert while at the Naval Undersea Warfare Engineering Station
+in Keyport, Washington.  Revision 16 of that game was the HP1000 version,
+finalized in 1981.  Revision 17 was a nearly direct translation of that
+to the HP3000.  This port is based upon the Revision 17 source code, with
+modifications from the Revision 16 source for clarity.
+
+
+Changes since version 19.3
+---------------------------
+  
+   - Other players can now be shot if you have the gun
+
+   
+Changes since version 19.2
+---------------------------
+   
+   - Modified intro acknowledgement code to clearly identify Bill Wolpert
+     as the author (based upon email from various persons).
+
+   - Fixed curtain-closing code.  It had previously been possible to
+     open curtains, but not to close them again.
+
+   - Added swear words from version 16 back in, plus one question word
+     which had been lost
+
+   - Fixed two more logical and/or mistakes.  These made it impossible to
+     look at certain items.  Yet another ZaneBug (YAZB)!
+
+
+Changes since version 19.1
+---------------------------
+   
+   - A paren problem made it impossible to actually solve the murder in
+     previous versions.  Now fixed and verified.  This was another ZaneBug.
+
+   - The heavy use of "goto"s (a result of the directness of the port
+     from the original fortran) broke the way output buffers were 
+     flushed, apparently, which led to weird output behavior after
+     a scanf().  Replaced all scanf()'s with fgets(), and things are
+     now happy again.
+
+   - Verified correctness of the timing.  This had been in question
+     wrt the cold corridor and how to get down it; I have now made
+     a walkthrough that proves it works.  This isn't really a change,
+     but it's still important.
+
+   - Determined that "John Rasins," previously thought to be an author,
+     was really just an Interex CSL archive contributor for one of
+     the early revisions of the fortran source.  The real author has
+     been tentatively identified as a "Bill Wolpert," which sounds familiar
+     from my early days of playing this.  Changed this in the intro 
+     acknowledgements.
+
+Changes since version 19.00
+---------------------------
+
+   - Rebecca Zane found three fairly insidious bugs having to do with
+     the way the globe dropped and how characters answered questions.
+     All of these are now fixed in v19.1 and the responses appear to
+     be the way we expected them to be.
+
+   - Some of the formatting having to do with long responses to questions
+     has been changed so that it doesn't linewrap past 80 columns.
+
+
+Platform Support
+----------------
+
+Mystery Mansion is known to compile and run on the following platforms:
+
+        OpenBSD 2.5, 2.6 (x86)
+        OpenBSD 2.6 (sparc)
+        Solaris 2.7 (x86 & sparc)
+        SunOS 4.1.3_U1 
+        DUNIX-4.0D 
+        HP-UX 10.10, 10.20
+
+It also compiles and runs in win32 (Windows 95/98/NT) environments, 
+depending on the compiler you use.  I used Visual C++, and it compiled
+with no real problems.
+
+
