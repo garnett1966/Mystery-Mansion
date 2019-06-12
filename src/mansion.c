@@ -1382,6 +1382,7 @@ MMSB_9999:
 	goto MMSD;
 
 MMSC:
+	R=RND;
 	if ((ITST[5] > 300) && (IWRD[0][9] > 3) && (IWRD[0][9] < 12)) {
 		IPR[2]=290;
 		IPR[3]=0;
