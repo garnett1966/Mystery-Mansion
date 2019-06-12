@@ -10,59 +10,9 @@
  * from the former.  For proper formatting, view this file with your
  * tabstop set to 8.
  *
- * Copyright (C) 1999,2000 James Garnett   garnett@catbelly.com.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- *
  * This software is provided ``as is'' and any express or implied warranties, 
  * including, but not limited to, the implied warranties of merchantability 
  * and fitness for a particular purpose are disclaimed.  
- *
- * $Log: mansion.c,v $
- * Revision 1.10  2000/04/02 21:08:20  garnett
- * fixed question code
- *
- * Revision 1.9  2000/02/27 19:27:25  garnett
- * Version 19.3
- * modified acks to show real author (bill wolpert)
- * fixed curtain-closing code
- * added swear words from v16 back in
- * fixed the look-at-table code
- *
- * Revision 1.8  2000/02/19 21:06:55  garnett
- * Version 19.2
- * fixed output flushing by replacing scanf() with fgets()
- * fixed broken murder-solution code
- *
- * Revision 1.7  2000/02/06 20:03:39  garnett
- * Version 19.1
- * fixed labelling problems in question-handling code
- * fixed broken globe/booty drop-handling code
- *
- * Revision 1.6  2000/01/23 20:56:04  garnett
- * Version 19.00
- *
- * Revision 1.5  2000/01/19 03:21:11  garnett
- * second beta (version 18.20)
- *
- * Revision 1.4  1999/11/15 02:06:54  garnett
- * first beta (version 18.10)
- *
- * Revision 1.3  1999/11/13 23:23:33  garnett
- * second alpha (version 18.02)
- *
- * Revision 1.2  1999/11/12 02:27:30  garnett
- * first alpha (version 18.01)
- *
- * Revision 1.1  1999/10/27 01:48:43  garnett
- * Initial revision
  *
  */
 #include <stdio.h>
