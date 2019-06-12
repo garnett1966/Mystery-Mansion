@@ -391,7 +391,7 @@ int IX, IR, IT, IBT;
 int IC, ID, IE;		/* more general-purpose vars     */
 int IPR[8];		/* more parameter-passing stuff  */
 int IRIT;		/* parameter-passing             */
-int IRB, IRX, IMZ[3], IXX;
+int IRB, IRX, IMZ[4], IXX;
 int IRC, ITS, ISC;
 int J1, J2;
 double RND, R1, RND1;
@@ -624,9 +624,10 @@ MMSA:
 
 	printf("\nMystery Mansion was originally developed by Bill Wolpert "
 	       "at the Naval\nUndersea Warfare Engineering Station (NUWES) "
-	       "in Keyport, Washington, in\nFortran IV, circa 1981.  This is "
-	       "Version 19.4 by James Garnett [2 Apr 2000].\nUpdates can be "
-	       "found at http://www.catbelly.com/.\n\n"
+	       "in Keyport, Washington, in\nFortran IV, circa 1981.  This "
+	       "version was ported to C in April, 2000 and is \noccasionally "
+	       "updated with bug fixes.  The latest source can be found at\n"
+           "https://github.com/garnett1966/Mystery-Mansion.\n\n"
 	       "                             - - -\n");
 
 	printf("\nWELCOME TO MYSTERY MANSION. (REV.%d) MYSTERY #%d\n\n"
@@ -6882,7 +6883,7 @@ RLret4:
 		IPR[3] = 0;
 		goto MMSK;
 	}
-	if (IVEN[33] > 20000) {
+	if (IVEN[33] > 22000) {
 		IPR[2] = 20020;
 		IPR[3] = 0;
 		goto MMSK;
@@ -6914,7 +6915,7 @@ RLret4:
 		goto MMSK;
 	}
 	if ((IWRD[1][9] == 74) && (IR == 85)) IXT[322] = 9185;
-	if ((IWRD[1][9] == 74) && (IR == 86)) IXT[322] = 8686;
+	if ((IWRD[1][9] == 74) && (IR == 86)) IXT[322] = 8586;
 	IVEN[74] = IVEN[74] + 1000;
 	IPR[2] = 1040;
 	IPR[3] = 0;
