@@ -1918,7 +1918,7 @@ MMSC_1097:
 	if (ITST[17] == 2) IXT[47]=3535;
 	IC = 100-ITST[17]/10;
 	ID = ITST[17]/10;
-	if ((IR == 35) && ((ID - floor(ID)) == 0) && (ITST[5] < 300)) 
+	if ((IR == 35) && ((ITST[17]%10) == 0) && (ITST[5] < 300)) 
 		printf("\nYOU PASSED A MILEAGE SIGN THAT READ: BIG CITY %d   "
 			"MYSTERY MANSION %d\n", IC, ID);
 	if ((IFD(IVEN[35]) == 2) && (ITD(IVEN[35]) == 6)) {
@@ -2009,13 +2009,13 @@ MMSC_1142:
 	if ((IR > 53) && (ITST[5] < 300)) goto MMSC_1190;
 	if (IR > 53) {
 		IPR[2]=1150;
-		IPR[3]=0;
+		IPR[3]=1;
 		goto MMSD;
 	}
 	if ((IROM[IR] > 20000) && (ITST[5] < 300)) goto MMSC_1190;
 	if (IROM[IR] > 20000) {
 		IPR[2]=1150;
-		IPR[3]=0;
+		IPR[3]=1;
 		goto MMSD;
 	}
 	if ((ITST[5] < 300) && (IROM[IR] > 10000)) {
@@ -2504,7 +2504,7 @@ MMSE:
 			putchar(IDTN[IDE][I]);
 		printf("\nACROSS THE ROOM FROM DOOR TO DOOR AND ALSO GOING ");
 		for (J=0; J<8; J++)
-			putchar(IDTN[IDE][I]);
+			putchar(IDTN[IDN][J]);
 		printf("\nOUT ANOTHER DOOR.");
 	}
 	if (IR == 3) {
@@ -2628,7 +2628,7 @@ MMSE:
 		printf("THERE IS AN ALTAR IN FRONT OF THE CHAPEL WITH SOME "
 			"COMMUNION WINE ON IT.");
 		if (IVEN[19] == 1216)
-			printf("\nTHERE IS ALSO A BURNING CANDLE ON ALTAR "
+			printf("\nTHERE IS ALSO A BURNING CANDLE ON THE ALTAR "
 				"ABOUT %d INCHES LONG.", IC);
 		if (IVEN[5] == 1316)
 			printf("\nA SILVER CROSS ABOUT A FOOT LONG HANGS ON "
