@@ -1082,7 +1082,7 @@ MMSB_171:
 	if (ITST[32] != 0) IT = ITST[5] - ITST[32];
 	if (IT > 15) IXT[352] = 4651;
 	if (IT > 15) IXT[351] = 4649;
-	if ((IT > 15) && (IXT[319] != 0)) IXT[319] = 4652;
+	if ((IT > 24) && (IXT[319] != 0)) IXT[319] = 4652;
 	if (IT > 24) IXT[353] = 4650;
 	if (IT > 36) IXT[354] = 4653;
 	if (IT > 36) IXT[318] = 4645;
@@ -1382,6 +1382,7 @@ MMSB_9999:
 	goto MMSD;
 
 MMSC:
+	R=RND;
 	if ((ITST[5] > 300) && (IWRD[0][9] > 3) && (IWRD[0][9] < 12)) {
 		IPR[2]=290;
 		IPR[3]=0;
@@ -1808,9 +1809,10 @@ MMSC_1045:
 		if ((IFSD(IXT[I]) != IFSD(IRES[4])) ||
 		    (ITFD(IXT[I]) < 42) || (ITFD(IXT[I]) > 51)) continue;
 		IMZ[++IC]=I;
-		if (IC == IX) break;
-		goto MMSC_1080;
+		if (IC == IX) goto MMSC_1055;
 	}
+	goto MMSC_1080;
+ MMSC_1055:
 	RND=RND*7.7-(int)(RND*7.7);
 	IX=(int)(360*RND+1);
 	
@@ -1945,8 +1947,8 @@ MMSC_1120:
 MMSC_1130:
 		/* Set IC == to NPC #J's current location */
 		IC=IRES[J]-(IRES[J]/100)*100;
-		if (((J == 3) || (J == 14)) && ((IC ==26) && 
-		   (((ITST[5] < 400) || (IFSD(J) != IR)) || (IC == 0))))
+		if (((J == 3) || (J == 14)) && (((IC > 26) &&
+		   (((ITST[5] < 400) || (IFSD(J) != IR)))) || (IC == 0)))
 			IRES[J]=100*(IRES[J]/100)+IRC;
 		if ((J == 4) && ((IC > 51) || (IC < 43))) 
 			IRES[4]=100*(IRES[4]/100)+IRC;
