@@ -24,6 +24,16 @@
 #include <ctype.h>
 #include <fcntl.h>
 
+/* VERSION NUMBER
+ *
+ * Major.minor.patch.
+ *
+ * Increment the major number when significant changes in content or build
+ * happen.  Increment the minor number when defects are fixed.  Increment
+ * the patch number when cosmetic issues are dealt with.
+ */
+#define VERSION	"20.0.0"
+
 /*
  * Only unix boxes want the standard unix header gunk
  */
@@ -577,8 +587,9 @@ MMSA:
 	       "in Keyport, Washington, in\nFortran IV, circa 1981.  This "
 	       "version was ported to C in April, 2000 and is \noccasionally "
 	       "updated with bug fixes.  The latest source can be found at\n"
-           "https://github.com/garnett1966/Mystery-Mansion.\n\n"
-	       "                             - - -\n");
+	       "https://github.com/garnett1966/Mystery-Mansion.\n\n"
+	       "This is version %s.\n\n"
+	       "                             - - -\n", VERSION);
 
 	printf("\nWELCOME TO MYSTERY MANSION. (REV.%d) MYSTERY #%d\n\n"
 /*
