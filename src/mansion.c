@@ -32,7 +32,7 @@
  * happen.  Increment the minor number when defects are fixed.  Increment
  * the patch number when cosmetic issues are dealt with.
  */
-#define VERSION	"20.0.0"
+#define VERSION	"20.1.0"
 
 /*
  * Only unix boxes want the standard unix header gunk
@@ -1808,7 +1808,7 @@ MMSC_1025:
 	}
 MMSC_1045:
 	IC=1;
-	if ((IR < 42) | (IR > 53) || (IRES[4] >= 10000) ||
+	if ((IR < 42) || (IR > 53) || (IRES[4] >= 10000) ||
 	    (IFSD(IRES[4]) == 52)) goto MMSC_1080;
 	IMZ[1]=0;
 	IMZ[2]=0;
@@ -3987,7 +3987,7 @@ MMSF_10000:
 		IPR[3] = 0;
 		goto MMSG;
 	}
-	if ((IR == 19) && ((IWRD[0][9] == 33) && (IWRD[1][9] = 92))) {
+	if ((IR == 19) && ((IWRD[0][9] == 33) && (IWRD[1][9] == 92))) {
 		IXT[11]=2219;
 		IPR[2] = 1095;
 		IPR[3] = IR;

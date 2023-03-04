@@ -1,13 +1,13 @@
 I started this port in 1998 while finishing my Master's thesis, or, that is,
-in an effort to avoid thinking about finishing it.  I approached it by 
+in an effort to avoid thinking about finishing it.  I approached it by
 performing a dejanews search for anyone else who'd attempted anything like
 it.
 
-Jeff Greenberg was the first I found who had tried it.  His attempted port   
-to BASIC, and our subsequent conversations, clarified several issues.  He  
+Jeff Greenberg was the first I found who had tried it.  His attempted port
+to BASIC, and our subsequent conversations, clarified several issues.  He
 also gave me a copy of the Fortran IV source from which he worked.
 
-Roy Buzdor gave me a second copy of the source for comparison's sake, and   
+Roy Buzdor gave me a second copy of the source for comparison's sake, and
 described the system-call semantics of a variety of HP1000 syscalls which
 enabled me to really get the port going.
 
@@ -26,7 +26,7 @@ Once the port was done, several other folks helped me form a fuller picture
 of the history of Mystery Mansion.  The most of informative of these
 was Ken Cornetet, who had already completed an f2c port of Revision 16.
 He therefore deserves recognition as the first person to have a unix/C
-version of Mystery Mansion available; it's a shame that Interex didn't 
+version of Mystery Mansion available; it's a shame that Interex didn't
 archive this version, or else we all would've been playing it a lot sooner.
 Ken gave me the Revision 16 source and helped me track down Bill Wolpert,
 the original author in addition to everything else.  Finally, Ken managed
@@ -35,15 +35,12 @@ Revision 16 source that Art Gentry submitted, thereby completing my source
 tree with all known versions of Mystery Mansion.
 
 GianCarlo De Pol made me aware of the Revision 16 port running under VMS
-on a MicroVAX system.  His is currently the first (and only) report of 
-Mystery Mansion making its way outside of North America, and also the first 
-(and only) indication that it runs on anything besides Hewlett Packard 
+on a MicroVAX system.  His is currently the first (and only) report of
+Mystery Mansion making its way outside of North America, and also the first
+(and only) indication that it runs on anything besides Hewlett Packard
 computers.  GianCarlo also helped to find and debug the post-beta versions.
 
 Of course, it was Bill who wrote Mystery Mansion and started all this.
 He was kind enough to write to me to verify that he started writing it
 in 1978.  Without his highly original efforts, there would not have been
 a mansion to explore at all.
-
-UPDATE 11 June 2019:
-I have incorporated some bug fixes discovered by Alessandro Giassi.

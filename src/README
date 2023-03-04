@@ -2,6 +2,10 @@
 Mystery Mansion
 ---------------
 
+03 March 2023
+
+Fixed a couple of code defects discovered by skogtun.
+
 11 June 2019
 
 I, James Garnett, the author of this C port of the original Fortran IV code,
@@ -19,6 +23,11 @@ modifications from the Revision 16 source for clarity.
 
 The current version is displayed upon startup.  This file is updated only
 occasionally.
+
+Version 20.1.0
+--------------
+
+Defect fixes.
 
 Changes since version 19.4
 ---------------------------
